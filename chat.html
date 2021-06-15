@@ -5,7 +5,7 @@
   <meta name="viewport"
     content="width=device-width,
        initial-scale=1.0">
-  <title>Pasatiempo</title>
+  <title>Chat</title>
   <script
     src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js">
     </script>
@@ -23,36 +23,34 @@
   <script type="module"
     src="cmp/mi-footer.js">
     </script>
+  <script type="module"
+    src="cmp/mi-progreso.js">
+    </script>
   <link rel="stylesheet"
     href="css/estilos.css">
 </head>
 <body>
+  <mi-nav></mi-nav>
   <form name="forma">
-    <mi-nav></mi-nav>
     <header>
-      <h1>Pasatiempo</h1>
+      <h1>Chat</h1>
       <div class="herramientas">
-        <a href="pasatiempos.html">
-          Cancelar</a>
-        <button>Guardar</button>
-        <button name="eliminar"
-          type="button">
-          Eliminar
-        </button>
+        <input name="texto"
+          required
+          placeholder="Mensaje">
+        <button>Enviar</button>
       </div>
     </header>
-    <p>
-      <label>
-        Nombre
-        <input name="nombre"
-          type="text" required
-          value="Cargando…">
-      </label>
-    </p>
+    <ul id="lista" class="lista">
+      <li>
+        <mi-progreso>
+        </mi-progreso>
+      </li>
+    </ul>
     <mi-footer></mi-footer>
   </form>
   <script type="module"
-    src="js/CtrlPasatiempo.js">
+    src="js/CtrlChat.js">
     </script>
 </body>
 </html>

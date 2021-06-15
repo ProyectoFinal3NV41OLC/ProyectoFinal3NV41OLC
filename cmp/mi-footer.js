@@ -1,7 +1,13 @@
-class MiFooter extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = /* html */
-            `Copyright &copy; 2021 Oliver López Cerón.`;
-    }
+class MiFooter
+  extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = /* html */
+      `<p>
+        &copy; 2021
+        Oliver López Cerón
+      </p>`;
+  }
 }
-customElements.define("mi-footer", MiFooter);
+
+customElements.define(
+  "mi-footer", MiFooter);
