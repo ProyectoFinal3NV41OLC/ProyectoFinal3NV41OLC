@@ -133,7 +133,6 @@ async function
         `${cod(data.nombre)}`);
     }
   }
-  return "----";
 }
 
 /** Recupera el html de los
