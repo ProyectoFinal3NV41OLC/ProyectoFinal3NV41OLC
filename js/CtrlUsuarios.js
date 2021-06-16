@@ -112,29 +112,6 @@ async function htmlFila(doc) {
       </a>
     </li>`);
 }
-
-/** Recupera el html de un
- * pasatiempo en base a su id.
- * @param {string} id */
-async function
-  buscaPasatiempo(id) {
-  if (id) {
-    const doc =
-      await daoPasatiempo.
-        doc(id).
-        get();
-    if (doc.exists) {
-      /**
-       * @type {import(
-          "./tipos.js").
-            Pasatiempo} */
-      const data = doc.data();
-      return (/* html */
-        `${cod(data.nombre)}`);
-    }
-  }
-}
-
 /** Recupera el html de los
  * roles en base a sus id
  * @param {string[]} ids */
