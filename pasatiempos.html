@@ -5,7 +5,7 @@
   <meta name="viewport"
     content="width=device-width,
        initial-scale=1.0">
-  <title>Productos</title>
+  <title>Usuarios</title>
   <script
     src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js">
     </script>
@@ -14,6 +14,10 @@
     </script>
   <script
     src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js">
+    </script>
+  <!-- Agrega el manejo de storage. -->
+  <script
+    src="https://www.gstatic.com/firebasejs/8.5.0/firebase-storage.js">
     </script>
   <script src="js/init.js">
   </script>
@@ -32,10 +36,9 @@
 <body>
   <mi-nav></mi-nav>
   <header>
-    <h1>Productos</h1>
+    <h1>Usuarios</h1>
     <div class="herramientas">
-      <a
-        href="pasatiempoNuevo.html">
+      <a href="usuarioNuevo.html">
         Agregar…</a>
     </div>
   </header>
@@ -47,7 +50,7 @@
   </ul>
   <mi-footer></mi-footer>
   <script type="module"
-    src="js/CtrlPasatiempos.js">
+    src="js/CtrlUsuarios.js">
     </script>
 </body>
 </html>
