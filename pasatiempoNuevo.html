@@ -5,15 +5,19 @@
   <meta name="viewport"
     content="width=device-width,
        initial-scale=1.0">
-  <title>
-    Pasatiempo Nuevo
-  </title>
+  <title>Producto Nuevo</title>
   <script
-    src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+    src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js">
+    </script>
   <script
-    src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
+    src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js">
+    </script>
   <script
-    src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+    src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js">
+    </script>
+  <script
+    src="https://www.gstatic.com/firebasejs/8.5.0/firebase-storage.js">
+    </script>
   <script src="js/init.js">
   </script>
   <script type="module"
@@ -22,6 +26,9 @@
   <script type="module"
     src="cmp/mi-footer.js">
     </script>
+  <script type="module"
+    src="cmp/mi-progreso.js">
+    </script>
   <link rel="stylesheet"
     href="css/estilos.css">
 </head>
@@ -29,10 +36,9 @@
   <form name="forma">
     <mi-nav></mi-nav>
     <header>
-      <h1>Pasatiempo Nuevo</h1>
+      <h1>Producto Nuevo</h1>
       <div class="herramientas">
-        <a
-          href="pasatiempos.html">
+        <a href="usuarios.html">
           Cancelar</a>
         <button type="submit">
           Guardar
@@ -41,15 +47,24 @@
     </header>
     <p>
       <label>
-        Nombre
-        <input name="nombre"
-          type="text" required>
+        Nombre del producto
+        <input name="cue"
+          type="email" required>
+      </label>
+    </p>
+    <p>
+      <label>
+        Avatar
+        <input name="avatar"
+          type="file" required
+          accept=".png,.jpg,.jpeg,.gif">
       </label>
     </p>
     <mi-footer></mi-footer>
   </form>
   <script type="module"
-    src="js/CtrlPasatiempoNuevo.js">
+    src="js/CtrlUsuarioNuevo.js">
     </script>
 </body>
 </html>
+
