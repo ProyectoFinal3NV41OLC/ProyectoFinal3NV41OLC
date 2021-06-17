@@ -10,7 +10,7 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraPasatiempos
+  muestraProductos
 } from "./navegacion.js";
 import {
   tieneRol
@@ -66,7 +66,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraPasatiempos();
+    muestraProductos();
   }
 }
 
