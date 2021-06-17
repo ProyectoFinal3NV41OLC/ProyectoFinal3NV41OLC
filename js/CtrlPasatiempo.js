@@ -10,30 +10,29 @@ import {
   muestraError
 } from "../lib/util.js";
 import {
-  muestraUsuarios
+  muestraPasatiempos
 } from "./navegacion.js";
 import {
   tieneRol
 } from "./seguridad.js";
 import {
-  checksRoles,
-  guardaUsuario,
-  selectPasatiempos
-} from "./usuarios.js";
+  checksDis,
+  guardaProducto,
+} from "./productos.js";
 
 const params =
   new URL(location.href).
     searchParams;
 const id = params.get("id");
-const daoUsuario = getFirestore().
-  collection("Usuario");
+const daoProducto = getFirestore().
+  collection("Producto");
 /** @type {HTMLFormElement} */
 const forma = document["forma"];
 const img = document.
   querySelector("img");
 /** @type {HTMLUListElement} */
-const listaRoles = document.
-  querySelector("#listaRoles");
+const listaDis = document.
+  querySelector("#listaDis");
 getAuth().onAuthStateChanged(
   protege, muestraError);
 
@@ -49,7 +48,7 @@ async function protege(usuario) {
 
 async function busca() {
   try {
-    const doc = await daoUsuario.
+    const doc = await daoProducto.
       doc(id).
       get();
     if (doc.exists) {
@@ -57,11 +56,8 @@ async function busca() {
       forma.cue.value = id || "";
       img.src =
         await urlStorage(id);
-      selectPasatiempos(
-        forma.pasatiempoId,
-        data.pasatiempoId)
-      checksRoles(
-        listaRoles, data.rolIds);
+      checksDis(
+        listaDis, data.rolIds2);
       forma.addEventListener(
         "submit", guarda);
       forma.eliminar.
@@ -76,7 +72,7 @@ async function busca() {
 
 /** @param {Event} evt */
 async function guarda(evt) {
-  await guardaUsuario(evt,
+  await guardaProducto(evt,
     new FormData(forma), id);
 }
 
@@ -84,10 +80,10 @@ async function elimina() {
   try {
     if (confirm("Confirmar la " +
       "eliminación")) {
-      await daoUsuario.
+      await daoProducto.
         doc(id).delete();
       await eliminaStorage(id);
-      muestraUsuarios();
+      muestraPasatiempos();
     }
   } catch (e) {
     muestraError(e);
