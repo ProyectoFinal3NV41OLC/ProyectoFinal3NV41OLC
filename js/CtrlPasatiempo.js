@@ -53,7 +53,7 @@ async function busca() {
       get();
     if (doc.exists) {
       const data = doc.data();
-      forma.cue.value = id || "";
+      forma.producto.value = id || "";
       img.src =
         await urlStorage(id);
       checksDis(
