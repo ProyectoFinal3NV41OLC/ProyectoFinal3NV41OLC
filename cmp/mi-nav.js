@@ -45,7 +45,7 @@ class MiNav extends HTMLElement {
           </li>
           <li>
             <a href=
-        "pasatiempos.html">Pasatiempos</a>
+        "pasatiempos.html">Productos</a>
           </li>`;
       }
       /* Enlaces para solo
