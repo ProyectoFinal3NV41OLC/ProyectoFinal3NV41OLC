@@ -9,16 +9,15 @@ import {
   tieneRol
 } from "./seguridad.js";
 import {
-  checksRoles,
-  guardaUsuario,
-  selectPasatiempos
-} from "./usuarios.js";
+  checksDis,
+  guardaProducto,
+} from "./productos.js";
 
 /** @type {HTMLFormElement} */
 const forma = document["forma"];
 /** @type {HTMLUListElement} */
-const listaRoles = document.
-  querySelector("#listaRoles");
+const listadis = document.
+  querySelector("#listaDis");
 
 getAuth().onAuthStateChanged(
   protege, muestraError);
@@ -31,9 +30,7 @@ async function protege(usuario) {
     ["Administrador"])) {
     forma.addEventListener(
       "submit", guarda);
-    selectPasatiempos(
-      forma.pasatiempoId, "");
-    checksRoles(listaRoles, []);
+    checksDis(listadis, []);
   }
 }
 
@@ -42,7 +39,7 @@ async function guarda(evt) {
   const formData =
     new FormData(forma);
   const id = getString(
-    formData, "cue").trim();
-  await guardaUsuario(evt,
+    formData, "producto").trim();
+  await guardaProducto(evt,
     formData, id);
 }
