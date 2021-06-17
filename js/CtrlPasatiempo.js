@@ -66,7 +66,7 @@ async function busca() {
     }
   } catch (e) {
     muestraError(e);
-    muestraUsuarios();
+    muestraPasatiempos();
   }
 }
 
