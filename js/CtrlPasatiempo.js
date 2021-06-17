@@ -17,7 +17,7 @@ import {
 } from "./seguridad.js";
 import {
   checksDis,
-  guardaProducto,
+  guardaProducto
 } from "./productos.js";
 
 const params =
