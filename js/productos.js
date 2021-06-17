@@ -57,7 +57,7 @@ import {
     checkDis(doc, set) {
     /**
      * @type {
-        import("./tipos.js").Rol} */
+        import("./tipos.js").Disponibilidad} */
     const data = doc.data();
     const checked =
       set.has(doc.id) ?
@@ -97,7 +97,6 @@ import {
       await daoProducto.
         doc(id).
         set({
-
           rolIds2
         });
       const avatar =
