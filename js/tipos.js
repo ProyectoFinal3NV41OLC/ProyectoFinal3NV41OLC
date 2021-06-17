@@ -1,4 +1,9 @@
 /**
+ * @typedef {Object} Disponibilidad
+ * @property {string} descripción
+ */
+
+/**
  * @typedef {Object} Rol
  * @property {string} descripción
  */
@@ -7,6 +12,12 @@
  * @typedef {Object} Pasatiempo
  * @property {string} nombre
  */
+
+/**
+ * @typedef {Object} Producto
+ * @property {string[]} rolIds2
+ */
+
 
 /**
  * @typedef {Object} Usuario
