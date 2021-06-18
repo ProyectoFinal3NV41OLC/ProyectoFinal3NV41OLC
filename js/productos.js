@@ -8,7 +8,7 @@ import {
     cod, muestraError
   } from "../lib/util.js";
   import {
-    muestraPasatiempos
+    muestraProductos
   } from "./navegacion.js";
   
   
@@ -102,7 +102,7 @@ import {
       const avatar =
         formData.get("avatar");
       await subeStorage(id, avatar);
-      muestraPasatiempos();
+      muestraProductos();
     } catch (e) {
       muestraError(e);
     }
