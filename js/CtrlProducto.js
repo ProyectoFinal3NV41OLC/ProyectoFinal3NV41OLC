@@ -83,7 +83,7 @@ async function elimina() {
       await daoProducto.
         doc(id).delete();
       await eliminaStorage(id);
-      muestraPasatiempos();
+      muestraProductos();
     }
   } catch (e) {
     muestraError(e);
